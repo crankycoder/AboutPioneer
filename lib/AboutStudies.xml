@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Firefox Pioneer</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="chrome://global/skin/about.css"/>
+  <link rel="stylesheet" href="resource://about-pioneer/lib/aboutPioneer.css"/> -->
+</head>
+<body class="aboutPageWideContainer">
+<h1>Firefox Pioneer</h1>
+
+<h2>Pioneer</h2>
+<table id="pioneer_killswitch">
+  <tr>
+    <th>Framework for Opt-in Listener Studies</th>
+    <td>
+        <input id='study_killswitch' type='button' value='Disable All'/>
+    </td>
+  </tr>
+</table>
+<table id="studys">
+  <tr>
+    <th>Heatmap</th>
+    <td>
+        <input id='study_heatmap' type='checkbox'/>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
