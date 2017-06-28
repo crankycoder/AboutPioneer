@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /* global Components, Services, XPCOMUtils */
-/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "AboutStudiesProtocol" }] */
+/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "AboutPioneerProtocol" }] */
 
 "use strict";
 
@@ -13,7 +13,7 @@ Cm.QueryInterface(Ci.nsIComponentRegistrar);
 Cu.import("resource://gre/modules/Services.jsm");
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 
-this.EXPORTED_SYMBOLS = ["AboutStudiesProtocol"];
+this.EXPORTED_SYMBOLS = ["AboutPioneerProtocol"];
 
 /**
  * Required data for registering a protocol handler. This data is referred to
@@ -27,7 +27,7 @@ const protocolInfo = {
   classDescription: "about:pioneer page module",
   classID: Components.ID("ad24d962-8c77-43d6-b6b3-510200c0f246"),
   contractID: "@mozilla.org/network/protocol/about;1?what=pioneer",
-  QueryInterface: XPCOMUtils.generateQI([Ci.nsIStudiesProtocolHandler])
+  QueryInterface: XPCOMUtils.generateQI([Ci.nsIPioneerProtocolHandler])
 };
 
 /**
@@ -47,8 +47,6 @@ class StudiesProtocolHandler {
         Ci.nsILoadInfo.SEC_ALLOW_CROSS_ORIGIN_DATA_IS_NULL,
         Ci.nsIContentPolicy.TYPE_DOCUMENT
       );
-
-      dump(`Channel is registered`);
     } catch (ex) {
       throw new Error(`Error creating about:pioneer protocol - ${ex}`);
     }
@@ -65,7 +63,7 @@ class StudiesProtocolHandler {
  * handler, effectively enabling or disabling the ability for users to navigate
  * to `about:pioneer`.
  */
-const AboutStudiesProtocol = {
+const AboutPioneerProtocol = {
   instance: null,
 
   /**

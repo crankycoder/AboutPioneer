@@ -1,0 +1,20 @@
+{
+  "name": "about-pioneer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "groupspanel.js",
+  "dependencies": {
+    "babel-plugin-transform-react-jsx": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Ng <victor@crankycoder.com>",
+  "license": "MPL-2.0"
+}

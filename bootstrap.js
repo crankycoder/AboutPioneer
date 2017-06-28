@@ -11,9 +11,15 @@ XPCOMUtils.defineLazyModuleGetter(this, "AboutPioneerProtocol",
 
 this.install = function() {};
 
-this.startup = async function() {
+this.startup = function() {
   // Enable the about:pioneer page
-  AboutPioneerProtocol.register();
+  console.log("Pre register");
+  try {
+    AboutPioneerProtocol.register();
+  } catch (ex) {
+    console.log(`Caught ${ex}`);
+  }
+  console.log("Post register");
 };
 
 this.shutdown = function() {
