@@ -4,8 +4,10 @@
 <head>
   <title>Firefox Pioneer</title>
   <meta charset="utf-8" />
+
   <link rel="stylesheet" href="chrome://global/skin/about.css"/>
   <link rel="stylesheet" href="resource://about-pioneer/lib/aboutPioneer.css"/> -->
+
 </head>
 <body class="aboutPageWideContainer">
 <h1>Firefox Pioneer</h1>
@@ -16,7 +18,7 @@
       <tr>
         <th>Framework for Opt-in Listener Studies</th>
         <td>
-            <input id='study_killswitch' type='button' value='Disable All'/>
+            <input id='allstudy_killswitch' type='button' value='Disable All'/>
         </td>
       </tr>
     </table>
@@ -29,5 +31,7 @@
       </tr>
     </table>
 
+    <script src="resource://about-pioneer/lib/jquery-3.2.1.min.js"></script>
+    <script src="resource://about-pioneer/lib/aboutStudies.js"></script>
 </body>
 </html>
