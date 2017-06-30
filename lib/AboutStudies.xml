@@ -4,10 +4,8 @@
 <head>
   <title>Firefox Pioneer</title>
   <meta charset="utf-8" />
-
   <link rel="stylesheet" href="chrome://global/skin/about.css"/>
   <link rel="stylesheet" href="resource://about-pioneer/lib/aboutPioneer.css"/> -->
-
 </head>
 <body class="aboutPageWideContainer">
 <h1>Firefox Pioneer</h1>
@@ -16,17 +14,18 @@
 
     <table id="pioneer_killswitch">
       <tr>
-        <th>Framework for Opt-in Listener Studies</th>
+        <th>Enroll into all Pioneer studies</th>
         <td>
-            <input id='allstudy_killswitch' type='button' value='Disable All'/>
+            <input id='allstudy_killswitch' type='checkbox' />
         </td>
       </tr>
     </table>
+
     <table id="studies">
       <tr>
         <th>Heatmap</th>
         <td>
-            <input id='study_heatmap' type='checkbox'/>
+            <input id='study_heatmap' disabled='true' value='false' type='checkbox'/>
         </td>
       </tr>
     </table>
