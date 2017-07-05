@@ -1,10 +1,11 @@
 "use strict";
 
-/* global Components, XPCOMUtils, AboutPioneerProtocol */
+/* global Components, XPCOMUtils, AboutPioneerProtocol, Services */
 /* eslint no-unused-vars: ["error", { "varsIgnorePattern": "install|startup|shutdown" }] */
 
 const {utils: Cu} = Components;
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
+Cu.import("resource://gre/modules/Services.jsm");
 
 XPCOMUtils.defineLazyModuleGetter(this, "AboutPioneerProtocol",
   "resource://about-pioneer/lib/AboutPioneerProtocol.jsm");
@@ -12,6 +13,12 @@ XPCOMUtils.defineLazyModuleGetter(this, "AboutPioneerProtocol",
 this.install = function() {};
 
 this.startup = function() {
+  // Register a listener
+  //
+  //
+
+  Services.mm.loadFrameScript("chrome://about-pioneer/content/frame-script.js", true);
+
   // Enable the about:pioneer page
   console.log("Pre register");
   try {

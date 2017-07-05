@@ -55,7 +55,9 @@ class StudiesProtocolHandler {
   }
 
   // Required by the protocol handler, despite not doing anything.
-  getURIFlags() {}
+  getURIFlags() {
+    return Ci.nsIAboutModule.ALLOW_SCRIPT | Ci.nsIAboutModule.URI_SAFE_FOR_UNTRUSTED_CONTENT;
+  }
 }
 
 /**

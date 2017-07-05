@@ -1,2 +1,3 @@
 resource about-pioneer .
 content about-pioneer lib
+content about-pioneer chrome/content/
