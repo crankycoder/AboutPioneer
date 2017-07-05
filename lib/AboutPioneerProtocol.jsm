@@ -22,7 +22,7 @@ this.EXPORTED_SYMBOLS = ["AboutPioneerProtocol"];
  */
 const protocolInfo = {
   // The file/destination for the protocol.
-  uri: Services.io.newURI("resource://about-pioneer/lib/AboutStudies.xml"),
+  uri: Services.io.newURI("resource://about-pioneer/lib/AboutStudies.xhtml"),
   // Other properties are used internally by the protocol handler.
   classDescription: "about:pioneer page module",
   classID: Components.ID("ad24d962-8c77-43d6-b6b3-510200c0f246"),
@@ -33,7 +33,7 @@ const protocolInfo = {
 /**
  * Component definition for the about:pioneer protocol handler.
  * Registers a component with the browser that establishes an `about:pioneer`
- * protocol handler. Navigating to `about:pioneer` displays `AboutStudies.xml`.
+ * protocol handler. Navigating to `about:pioneer` displays `AboutStudies.xhtml`.
  */
 class StudiesProtocolHandler {
   newChannel() {
